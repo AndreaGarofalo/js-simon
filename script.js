@@ -27,4 +27,9 @@ const timeRemaining = setInterval(function () {
 
   // calcolo i giorni rimanenti usando dividendo il tempo rimasto per il numero di millisecondi presenti nei giorni
   const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+
+  // calcolo le ore rimanenti usando il modulo dei giorni e dividendo il tempo rimasto per il numero di millisecondi presenti nelle ore
+  const hours = Math.floor(
+    (timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
 }, 1000);
