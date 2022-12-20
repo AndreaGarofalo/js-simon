@@ -44,4 +44,13 @@ const timeRemaining = setInterval(function () {
   hoursCounter.innerText = hours;
   minutesCounter.innerText = minutes;
   secondsCounter.innerText = seconds;
+
+  // quando il tempo rimasto arriva a zero setto tutto a 00 e blocco il setinterval
+  if (timeleft < 0) {
+    clearInterval(timeRemaining);
+    daysCounter.innerText = "00";
+    hoursCounter.innerText = "00";
+    minutesCounter.innerText = "00";
+    secondsCounter.innerText = "00";
+  }
 }, 1000);
