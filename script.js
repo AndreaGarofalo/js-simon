@@ -11,10 +11,17 @@ console.log("JS OK");
 // Esiste un oggetto JS in grado di gestire le date?
 // Esistono dei metodi per trasformare una data in millisecondi?
 
+// prendo gli elementi dal dom
 const daysCounter = document.getElementById("days");
-const hourCounter = document.getElementById("hour");
+const hoursCounter = document.getElementById("hours");
 const minutesCounter = document.getElementById("minutes");
 const secondsCounter = document.getElementById("seconds");
 
-const conuntDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
-console.log(conuntDownDate);
+// setto la data a cui devo arrivare per calcolare quanti millisecondi sono dall'1/1/1970 alla data desiderata
+const countDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
+
+// creo un funzione con setInterval per calcolare i millisecondi rimanenti
+const timeRemaining = setInterval(function () {
+  const now = new Date().getTime();
+  const timeleft = countDownDate - now;
+}, 1000);
