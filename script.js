@@ -24,4 +24,7 @@ const countDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
 const timeRemaining = setInterval(function () {
   const now = new Date().getTime();
   const timeleft = countDownDate - now;
+
+  // calcolo i giorni rimanenti usando dividendo il tempo rimasto per il numero di millisecondi presenti nei giorni
+  const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
 }, 1000);
