@@ -38,4 +38,10 @@ const timeRemaining = setInterval(function () {
 
   // calcolo le secondi rimanenti usando il modulo dei minuti e dividendo il tempo rimasto per il numero di millisecondi presenti nelle secondi
   const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+  //   metto il risultato nei vari elementi
+  daysCounter.innerText = days;
+  hoursCounter.innerText = hours;
+  minutesCounter.innerText = minutes;
+  secondsCounter.innerText = seconds;
 }, 1000);
